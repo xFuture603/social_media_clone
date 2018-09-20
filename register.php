@@ -1,7 +1,7 @@
 <?php
 require 'config/config.php';
 require 'includes/form_handlers/register_handler.php';
-
+require 'includes/form_handlers/login_handler.php';
 ?>
 <html>
 <head>
@@ -13,6 +13,14 @@ require 'includes/form_handlers/register_handler.php';
   <script src="main.js"></script>
 </head>
 <body>
+
+  <form action="register.php" method="POST">
+      <input type="email" name="log_email" placeholder="Email Address">
+      <br>
+      <input type="password" name="log_password" placeholder="Password">
+      <br>
+      <input type="submit" name="login_button" value="Login">
+  </form>
   <form action="register.php" method="POST">
     <input type="text" name="reg_fname" placeholder="First Name" value="<?php 
     //Usersession get saved

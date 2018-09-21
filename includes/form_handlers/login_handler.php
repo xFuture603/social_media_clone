@@ -37,10 +37,20 @@ $password_verify = password_verify($password, $hash);
 // if a record is found, grab the data from the username column      
 if ($password_verify == 1){         $username = $row["username"];         
 // create a new session with username         
+$user_closed_query = mysqli_query($conn, "SELECT * FROM users WHERE email='$email' AND user_closed='yes'");
+if(mysqli_num_rows($user_closed_query) == 1){
+    $reopen_account = mysqli_query($conn, "UPDATE users SET user_closed='no' WHERE email='$email'");
+}
+
 $_SESSION["username"] = $username;         
 // redirect user to index page         
 header("Location: index.php");         
 exit();      
-}   
 }
+else {
+    array_push($error_array, "Email or password was incorrect<br>");
+}
+}
+
+
 ?>

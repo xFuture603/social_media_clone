@@ -15,7 +15,10 @@
   <div class="wrapper">
     <div class="login_box">
       <div class="login_header">
-        <h1>social media!</h1> Login or sign up below!
+        <h1>social media!</h1> 
+        
+        Login or sign up below!
+
       </div>
 
 

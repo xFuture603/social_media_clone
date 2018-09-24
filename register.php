@@ -14,11 +14,10 @@
 <body>
   <div class="wrapper">
     <div class="login_box">
-      <div class="login_header">
-        <h1>social media!</h1> 
-        
-        Login or sign up below!
 
+      <div class="login_header" style="width: 100%;">
+        <h1>social media!</h1> 
+        Login or sign up below!
       </div>
 
 
@@ -34,6 +33,7 @@
         <br>
         <input type="submit" name="login_button" value="Login">
         <br>
+        <a href="#" id="signup" class="signup">Need an account? Register here!</a>
 
         <?php if(in_array( "Email or password was incorrect<br>", $error_array)) echo "Email or password was incorrect<br>"; ?>
       </form>
@@ -82,10 +82,10 @@
         <br>
 
         <?php if(in_array( "<span style='color: #14C800;'>You're all set! Go ahead and login!</span><br>", $error_array)) echo "<span style='color: #14C800;'>You're all set! Go ahead and login!</span><br>"; ?>
-
+        <a href="#" id="signin" class="signin">Already have an account? Sign in here!</a>
       </form>
     </div>
-  </div>
+    </div>
 
 </body>
 

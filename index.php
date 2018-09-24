@@ -1,6 +1,8 @@
 <?php
-?>
+include("includes/header.php");
+//session_destroy();
 
-<html>
-<p>Hello</p>
+?>
+  Hello!
+</body>
 </html>

@@ -34,7 +34,7 @@ else {
   <a href="index.php">Social Media</a>
  </div>
    <nav>
-    <a href="#">
+     <a href="<?php echo $userLoggedIn; ?>">
        <?php echo $user['first_name'];?>
      </a>
      <a href="index.php">
@@ -55,3 +55,5 @@ else {
 
    </nav>
 </div>
+
+<div class="wrapper">

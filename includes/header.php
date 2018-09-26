@@ -1,5 +1,7 @@
 <?php
-require 'config/config.php';
+require_once 'config/config.php';
+include_once("includes/classes/Users.php");
+include_once("includes/classes/Post.php");
 
 if (isset($_SESSION['username'])) {
   $userLoggedIn = $_SESSION['username'];

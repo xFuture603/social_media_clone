@@ -1,7 +1,5 @@
 <?php
-include("includes/header.php");
-include("includes/classes/Users.php");
-include("includes/classes/Post.php");
+include_once("includes/header.php");
 //session_destroy();
 
 if(isset($_GET['profile_username'])) {

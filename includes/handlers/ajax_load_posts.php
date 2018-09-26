@@ -1,7 +1,7 @@
 <?php 
-include("../../config/config.php");
-include("../classes/Users.php");
-include("../classes/Post.php");
+include_once("../../config/config.php");
+include_once("../classes/Users.php");
+include_once("../classes/Post.php");
 
 $limit = 10; // Number of posts that get loaded per call
 

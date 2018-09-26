@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Quicksand-LightItalic';
+  src: url('../fontsQuicksand-LightItalic.otf');
+}
+
+@font-face {
+  font-family: 'Quicksand-BoldItalic';
+  src: url('../fontsQuicksand-BoldItalic.otf');
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
 form {
   text-align: center;
 }
@@ -5,6 +19,11 @@ form {
 body {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #229988;
 }
 
 .wrapper {
@@ -16,6 +35,7 @@ body {
 }
 
 .login_box {
+  font-family: 'Quicksand-LightItalic', sans-serif;
   position: relative;
   margin-right: auto;
   margin-left: auto;
@@ -29,6 +49,7 @@ body {
 }
 
 .login_header {
+  font-family: 'Quicksand-LightItalic', sans-serif;
   width: 100px;
   height: 90px;
   background-color: #ff0000;
@@ -39,7 +60,40 @@ body {
 }
 
 .login_header h1 {
+  font-family: 'Quicksand-BoldItalic', sans-serif;
   margin-top: 0;
   margin-bottom: 0;
   color: #229988;
+  text-shadow: #000000 0.5px 0.5px 0px;
+  font-size: 250%;
+}
+
+input[type="submit"] {
+  background-color: #229988;
+  border: 1px solid #229988;
+  border-radius: 3px;
+  margin: 5px 0 10px 0;
+  padding: 5px 10px 5px 10px;
+  color: #fff;
+  text-shadow: #000000 0.5px 0.5px 0px;
+  font-family: 'Quicksand-BoldItalic', sans-serif;
+  font-size: 100%;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  border: 1px solid #e5e5e5;
+  margin-top: 5px;
+  width: 70%;
+  height: 35px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+
+}
+
+input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover { 
+  border-color: #229988;
+}
+
+#second {
+  display: none;
 }

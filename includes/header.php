@@ -17,6 +17,7 @@ else {
 <html>
 <head>
   <title>Welcome to my social media!</title>
+  <script src="assets/js/social.js"></script>
   <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

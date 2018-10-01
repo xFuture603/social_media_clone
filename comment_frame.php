@@ -18,9 +18,9 @@
   </style>
 
   <?php
-require 'config/config.php';
-include("includes/classes/Users.php");
-include("includes/classes/Post.php");
+require_once 'config/config.php';
+include_once("includes/classes/Users.php");
+include_once("includes/classes/Post.php");
 
 if (isset($_SESSION['username'])) {
   $userLoggedIn = $_SESSION['username'];

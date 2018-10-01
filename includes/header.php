@@ -1,5 +1,7 @@
 <?php
-require 'config/config.php';
+require_once 'config/config.php';
+include_once("includes/classes/Users.php");
+include_once("includes/classes/Post.php");
 
 if (isset($_SESSION['username'])) {
   $userLoggedIn = $_SESSION['username'];
@@ -21,6 +23,8 @@ else {
   crossorigin="anonymous"></script>
   <!--Javascript -->
   <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/bootbox.min.js"></script>
+  <script src="assets/js/social.js"></script>
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -46,7 +50,7 @@ else {
      <a href="#">
        <i class="fa fa-bell fa-lg"></i>
      </a>
-     <a href="#">
+     <a href="request.php">
        <i class="fa fa-users fa-lg"></i>
      </a>
      <a href="#">

@@ -45,7 +45,7 @@ if(isset($_POST['post_message'])) {
         echo "<h4>You and <a href='$user_to'>" . $user_to_obj->getFirstAndLastName() . "</a></h4><hr><br>";
         echo "<div class='loaded_messages' id='scroll_messages'>";
           echo $messages_obj->getMessages($user_to);
-          echo "</div>";
+        echo "</div>";
 
       } 
       else {

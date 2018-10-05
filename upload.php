@@ -28,7 +28,7 @@ if(isset($_FILES['image']['name'])){
 		$ImageType = @explode('/', $_FILES['image']['type']);
 		$type = $ImageType[1]; //file type	
 	//Set Upload directory    
-		$uploaddir = $_SERVER['DOCUMENT_ROOT'].'/social_media_clone/assets/images/profile_pics';
+		$uploaddir = $_SERVER['DOCUMENT_ROOT'].'/social_media/assets/images/profile_pics';
 	//Set File name	
 		$file_temp_name = $profile_id.'_original.'.md5(time()).'n'.$type; //the temp file name
 		$fullpath = $uploaddir."/".$file_temp_name; // the temp file path
@@ -145,7 +145,7 @@ if (isset($_POST['x'])){
 		$result_path ="assets/images/profile_pics/".$finalname."n.jpeg";
 
 		//Insert image into database
-		$insert_pic_query = mysqli_query($con, "UPDATE users SET profile_pic='$result_path' WHERE username='$userLoggedIn'");
+		$insert_pic_query = mysqli_query($conn, "UPDATE users SET profile_pic='$result_path' WHERE username='$userLoggedIn'");
 		header("Location: ".$userLoggedIn);
 														
 }// post x

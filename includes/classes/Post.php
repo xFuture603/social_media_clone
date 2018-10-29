@@ -41,6 +41,10 @@ class Post
       $returned = mysqli_insert_id($this->conn);
 
       // Insert notification
+      if($user_to != 'none') {
+        $notification = new Notification($this->conn, $added_by);
+        $notification->insertNotification($returned_id, $user_to, "like");
+      }
       // Update post count for user
 
       $num_posts = $this->user_obj->getNumPosts();

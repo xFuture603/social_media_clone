@@ -20,6 +20,7 @@
 require_once 'config/config.php';
 include_once("includes/classes/Users.php");
 include_once("includes/classes/Post.php");
+include_once("includes/classes/Notification.php");
 
 if (isset($_SESSION['username'])) {
   $userLoggedIn = $_SESSION['username'];
@@ -67,7 +68,7 @@ if(isset($_POST['postComment' . $post_id])) {
   }
   if ($user_to != 'none' && $user_to != $userLoggedIn) {
     $notification = new Notification($conn, $userLoggedIn);
-    $notification->insertNotification($post_id, $user_to, "profiled_comment");
+    $notification->insertNotification($post_id, $user_to, "profile_comment");
   }
 
   $get_commenters = mysqli_query($conn, "SELECT * FROM comments WHERE post_id='$post_id'");
